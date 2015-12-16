@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>link</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background-color: #F2F2F2;
+      color: #666;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 12px;
+      color: #666;
+    }
+
+    a:hover {
+      color: #f02525;
+    }
+
+    h2 {
+
+    }
+
+    .link {
+      width: 800px;
+      margin: 0 auto;
+      list-style: none;
+      overflow: hidden;
+    }
+
+    .link li ul li{
+      display: inline-block;
+      padding: 10px;
+    }
+
+  </style>
+</head>
+<body>
+<ul class="link">
+  <li><h3>友情链接</h3></li>
+  <li>
+    <ul>
+      <li><h4>资料</h4></li>
+      <br/>
+      <li><a href="http://www.requirejs.org/" target="_blank">requirejs</a></li>
+      <li><a href="http://www.requirejs.cn/" target="_blank">requirejs中文网</a></li>
+      <li><a href="http://docs.kissyui.com/" target="_blank">KISSY</a></li>
+      <li><a href="http://seajs.org/docs/" target="_blank">Sea.js</a></li>
+      <li><a href="http://extjs-doc-cn.github.io/ext4api/" target="_blank">Ext4.1.0 Doc中文版</a></li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li><h4>工具</h4></li>
+      <br/>
+      <li><a href="http://apps.eky.hk/css-triangle-generator/" target="_blank">三角生成器</a></li>
+      <li><a href="http://jsbin.com/" target="_blank">jsbin在线编辑器</a></li>
+      <li><a href="http://codepen.io/" target="_blank">codepen在线编辑器</a></li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li><h4>博客</h4></li>
+      <br/>
+      <li><a href="http://www.haorooms.com/" target="_blank">haorooms博客</a></li>
+      <li><a href="http://www.ruanyifeng.com/" target="_blank">阮一峰的网络日志</a></li>
+      <li><a href="http://www.aliued.com/" target="_blank">阿里巴巴国际UED团队</a></li>
+      <li><a href="http://ued.taobao.org/blog/" target="_blank">淘宝UED</a></li>
+      <li><a href="http://isux.tencent.com/" target="_blank">腾讯ISUX</a></li>
+    </ul>
+  </li>
+  <script>
+    window.onload=function(){
+      var ul=document.getElementsByClassName("link");
+//      创建ajax对象
+      var xmlhttp;
+      if(window.XMLHttpRequest){// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+      }else{// code for IE6, IE5
+        xmlhttp=new ActiveXobject("Microsoft.XMLHTTP");
+      }
+//      发送请求
+      xmlhttp.open("get","data/link.json",true);
+      xmlhttp.send();
+//      响应状态
+
+    }
+  </script>
+</ul>
+</body>
+</html>
